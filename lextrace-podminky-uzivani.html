@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Podmínky užívání – Lextrace</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #141414;
+      --surface:  #1c1c1c;
+      --border:   #2e2e2e;
+      --text:     #e8e8e8;
+      --muted:    #888;
+      --accent:   #5b9cf6;
+      --white:    #ffffff;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    /* ── NAV ── */
+    nav {
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+    }
+    .nav-inner {
+      max-width: 820px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+    }
+    .logo {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--white);
+      text-decoration: none;
+      letter-spacing: .02em;
+    }
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: .875rem;
+      margin-left: 1.75rem;
+      transition: color .15s;
+    }
+    .nav-links a:hover { color: var(--text); }
+
+    /* ── WRAPPER ── */
+    .wrapper {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+    }
+
+    /* ── PAGE TITLE ── */
+    .page-title {
+      margin-bottom: 2.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .page-title h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: .5rem;
+    }
+    .page-title .date {
+      font-size: .875rem;
+      color: var(--muted);
+    }
+
+    /* ── TOC ── */
+    .toc {
+      margin-bottom: 3rem;
+    }
+    .toc p {
+      font-size: .875rem;
+      color: var(--muted);
+      margin-bottom: .75rem;
+    }
+    .toc ol {
+      padding-left: 1.25rem;
+    }
+    .toc ol li {
+      margin-bottom: .3rem;
+    }
+    .toc ol li a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: .9rem;
+    }
+    .toc ol li a:hover {
+      text-decoration: underline;
+    }
+
+    /* ── SECTIONS ── */
+    .section {
+      margin-bottom: 3rem;
+      scroll-margin-top: 2rem;
+    }
+    .section h2 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 1rem;
+    }
+    .section p {
+      color: var(--text);
+      margin-bottom: .9rem;
+      font-size: .95rem;
+    }
+    .section p:last-child { margin-bottom: 0; }
+
+    .section ul, .section ol {
+      padding-left: 1.4rem;
+      margin-bottom: .9rem;
+    }
+    .section ul li, .section ol li {
+      margin-bottom: .4rem;
+      font-size: .95rem;
+      color: var(--text);
+    }
+
+    hr.divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 3rem 0;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.75rem 2rem;
+      text-align: center;
+    }
+    footer p {
+      font-size: .8rem;
+      color: var(--muted);
+    }
+    footer a {
+      color: var(--muted);
+      text-decoration: underline;
+    }
+    footer a:hover { color: var(--text); }
+
+    @media (max-width: 600px) {
+      .wrapper { padding: 2.5rem 1.25rem 4rem; }
+      .page-title h1 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="#">Lextrace LLC</a>
+    <div class="nav-links">
+      <a href="#">Rozcestník</a>
+      <a href="#">Kontakt</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrapper">
+
+  <div class="page-title">
+    <h1>Podmínky užívání</h1>
+    <p class="date">Naposledy aktualizováno: 10. října 2026</p>
+  </div>
+
+  <!-- TOC -->
+  <div class="toc">
+    <p>Obsah</p>
+    <ol>
+      <li><a href="#prijeti">Přijetí podmínek</a></li>
+      <li><a href="#popis">Popis služeb</a></li>
+      <li><a href="#soukromi">Soukromí a ochrana osobních údajů</a></li>
+      <li><a href="#obsah">Obsah</a></li>
+      <li><a href="#software">Software</a></li>
+      <li><a href="#omezena-prava">Omezená práva</a></li>
+      <li><a href="#dokumenty">Dokumenty</a></li>
+      <li><a href="#prohlaseni">Prohlášení a záruky</a></li>
+      <li><a href="#odpovednost">Omezení odpovědnosti</a></li>
+      <li><a href="#ucet">Členský účet, heslo a bezpečnost</a></li>
+      <li><a href="#nezakonne">Nezákonné nebo zakázané použití</a></li>
+      <li><a href="#komunikace">Využití komunikačních služeb</a></li>
+    </ol>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 1 -->
+  <div class="section" id="prijeti">
+    <h2>1. Přijetí podmínek</h2>
+    <p>Služby, které vám Lextrace poskytuje, podléhají následujícím Podmínkám užívání („TOU"). Lextrace si vyhrazuje právo kdykoli aktualizovat a upravit TOU bez vašeho upozornění. Nejnovější verzi TOU lze prohlédnout kliknutím na hypertextový odkaz „Podmínky užití" umístěný ve spodní části našich webových stránek.</p>
+    <p>Když budeme aktualizovat TOU, Lextrace aktualizuje datum v horní části této stránky. Používáním webu po zveřejnění nové verze TOU souhlasíte s podmínkami této nové verze.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 2 -->
+  <div class="section" id="popis">
+    <h2>2. Popis služeb</h2>
+    <p>Prostřednictvím své sítě webových vlastností vám Lextrace poskytuje přístup k různým zdrojům, včetně vývojářských nástrojů, oblastí pro stahování, komunikačních fór a informací o produktech (souhrnně „Služby"). Služby, včetně jakýchkoli aktualizací, vylepšení, nových funkcí a/nebo přidání nových webových vlastností, podléhají těmto Podmínkám užívání.</p>
+    <p>Pokud není uvedeno jinak, Služby jsou určeny pro vaše osobní a nekomerční účely. Nesmíte upravovat, kopírovat, distribuovat, přenášet, zobrazovat, vykonávat, reprodukovat, publikovat, licencovat, vytvářet odvozená díla, převádět ani prodávat jakékoli informace, software, produkty nebo služby získané ze Služeb.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 3 -->
+  <div class="section" id="soukromi">
+    <h2>3. Soukromí a ochrana osobních údajů</h2>
+    <p>Viz <a href="https://lextrace-online.github.io/ochrana-osobnich-udaju/" target="_blank" rel="noopener noreferrer">Prohlášení o ochraně osobních údajů</a> týkající se shromažďování a používání vašich osobních údajů.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 4 -->
+  <div class="section" id="obsah">
+    <h2>4. Obsah</h2>
+    <p>Veškerý obsah zpřístupněný prostřednictvím Služeb, jako jsou texty, grafika, loga, ikony, obrázky, zvuky, hudba, digitální stahování, kompilace dat, software a dokumenty, je výhradním vlastnictvím Lextrace nebo jeho dodavatelů obsahu. Obsah je chráněn zákony o autorských právech, ochranných známkách, patentech a dalšími zákony o duševním vlastnictví v USA, EU i mezinárodně.</p>
+    <p>Všechna práva, která nejsou výslovně udělena, jsou vyhrazena Lextraci nebo jejím poskytovatelům obsahu.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 5 -->
+  <div class="section" id="software">
+    <h2>5. Software</h2>
+    <p>Jakýkoli obsah zpřístupněný ke stažení je chráněným autorským dílem Lextrace a/nebo jejích dodavatelů. Používání obsahu se řídí licenční smlouvou koncového uživatele („Licenční smlouva"), pokud je součástí obsahu. Koncový uživatel nesmí software používat, pokud nejprve nesouhlasí s podmínkami Licenční smlouvy. Skripty nebo kód třetích stran jsou licencovány jejich vlastníky, nikoli Lextrace.</p>
+    <p>Obsah je zpřístupněn ke stažení výhradně pro koncové uživatele podle Licenční smlouvy. Jakákoli reprodukce nebo redistribuce softwaru, která není v souladu s Licenční smlouvou, je zakázána a může vést k občanskoprávním i trestním sankcím.</p>
+    <p>Bez omezení výše uvedeného je kopírování nebo reprodukce obsahu na jiný server nebo místo pro další distribuci zakázáno, pokud není výslovně povoleno Licenční smlouvou.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 6 -->
+  <div class="section" id="omezena-prava">
+    <h2>6. Omezená práva</h2>
+    <p>Jakýkoli obsah stažený pro nebo jménem vlády USA je chráněn omezenými právy. Použití, duplikace nebo zveřejnění vládou USA podléhá omezením stanoveným v příslušných ustanoveních DFARS nebo 48 CFR.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 7 -->
+  <div class="section" id="dokumenty">
+    <h2>7. Dokumenty</h2>
+    <p>Povolení k používání dokumentů (např. odborné články, tiskové zprávy, datasheety, FAQ) je uděleno, pokud:</p>
+    <ol>
+      <li>oznámení o autorských právech zůstane ve všech kopiích,</li>
+      <li>použití je pouze pro informační a nekomerční účely a obsah nebude zveřejněn na žádné síti ani vysílán v médiích, a</li>
+      <li>nejsou prováděny žádné úpravy dokumentů.</li>
+    </ol>
+    <p>Dokumenty nezahrnují návrh nebo rozložení webu Lextrace ani jiných webů vlastněných či provozovaných Lextrace LLC. Prvky webu jsou chráněny zákony a nesmí být kopírovány ani napodobovány.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 8 -->
+  <div class="section" id="prohlaseni">
+    <h2>8. Prohlášení a záruky</h2>
+    <p>Obsah je zaručen pouze podle podmínek Licenční smlouvy. Lextrace se vzdává všech dalších záruk, včetně obchodovatelnosti, způsobilosti pro konkrétní účel, titulu a neporušení práv.</p>
+    <p>Lextrace neposkytuje žádné záruky ohledně přesnosti výsledků nebo výstupů nástrojů a utilit dostupných prostřednictvím Služeb.</p>
+    <p>Lextrace ani její dodavatelé nenesou odpovědnost za zvláštní, nepřímé nebo následné škody, včetně ztráty dat, zisku nebo užívání.</p>
+    <p>Dokumenty a grafika mohou obsahovat technické nepřesnosti nebo překlepy. Informace jsou pravidelně aktualizovány.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 9 -->
+  <div class="section" id="odpovednost">
+    <h2>9. Omezení odpovědnosti</h2>
+    <p>Lextrace nenese odpovědnost za zvláštní, nepřímé nebo následné škody vzniklé z používání softwaru, dokumentů nebo Služeb.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 10 -->
+  <div class="section" id="ucet">
+    <h2>10. Členský účet, heslo a bezpečnost</h2>
+    <p>Pokud některá ze Služeb vyžaduje účet, musíte poskytnout aktuální a přesné údaje. Jste odpovědní za důvěrnost hesla a účtu a za všechny aktivity na účtu. Lextrace musí být okamžitě informována o jakémkoli neoprávněném použití účtu.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 11 -->
+  <div class="section" id="nezakonne">
+    <h2>11. Nezákonné nebo zakázané použití</h2>
+    <p>Nesmíte používat Služby způsobem, který je nezákonný, zakázaný, poškozuje servery, sítě nebo narušuje používání Služeb ostatními. Nesmíte se pokoušet získat neoprávněný přístup k systémům Lextrace nebo k účtům jiných uživatelů.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 12 -->
+  <div class="section" id="komunikace">
+    <h2>12. Využití komunikačních služeb</h2>
+    <p>Služby mohou obsahovat komunikační nástroje (např. e‑mailové služby, fóra, chaty, komunity). Souhlasíte s jejich používáním pouze k vhodným účelům a nebudete zveřejňovat nevhodný, nezákonný nebo chráněný obsah.</p>
+    <p>Lextrace ani její zaměstnanci nepřijímají ani nezvažují nevyžádané nápady, včetně nápadů na nové reklamní kampaně, nové akce, nové produkty nebo technologie, procesy, materiály, marketingové plány či nové názvy produktů.</p>
+  </div>
+
+</div>
+
+<footer>
+  <p>&copy; 2026 Lextrace LLC. Všechna práva vyhrazena. &nbsp;·&nbsp; <a href="https://lextrace-online.github.io/souhlas_se_zpracovanim/" target="_blank" rel="noopener noreferrer">Souhlas se zpracováním osobních údajů</a> &nbsp;·&nbsp; <a href="https://lextrace-online.github.io/ochrana-osobnich-udaju/" target="_blank" rel="noopener noreferrer">Ochrana osobních údajů</a> &nbsp;·&nbsp; <a href="#">Cookies prohlášení</a></p>
+</footer>
+
+</body>
+</html>
